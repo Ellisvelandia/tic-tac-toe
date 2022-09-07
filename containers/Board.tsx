@@ -1,0 +1,9 @@
+function Board() {
+  return (
+    <div>
+      this is the board
+    </div>
+  )
+}
+
+export default Board

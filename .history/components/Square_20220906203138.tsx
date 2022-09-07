@@ -1,0 +1,3 @@
+function Square(params:type) {
+  
+}
