@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import Square from "../components/Square";
+import { useState, useEffect } from "react";
+import Square from "../components/";
 type Player = "X" | "O" | "BOTH" | null;
 
 function calculateWinner(squares: Player[]) {
@@ -35,7 +35,7 @@ function Board() {
     setCurrentPlayer(Math.round(Math.random() * 1) === 1 ? "X" : "O");
   }
 
-  function setSquareValue(index: number) {
+  function setSquaresValue(index: number) {
     const newData = squares.map((val, i) => {
       if (i === index) {
         return currentPlayer;
@@ -59,10 +59,10 @@ function Board() {
 
   return (
     <div>
-      {!winner && <p>Hey {currentPlayer}, its your turn</p>}
+      {!winner && <p>Hey {currentPlayer}, it's your turn</p>}
       {winner && winner !== "BOTH" && <p>Congratulations {winner}</p>}
       {winner && winner === "BOTH" && (
-        <p>Congratulations you are both winners</p>
+        <p>Congratulations you're both winners</p>
       )}
 
       <div className="grid">

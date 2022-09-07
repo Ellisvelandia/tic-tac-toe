@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Square from "../components/Square";
 type Player = "X" | "O" | "BOTH" | null;
 
@@ -35,7 +35,7 @@ function Board() {
     setCurrentPlayer(Math.round(Math.random() * 1) === 1 ? "X" : "O");
   }
 
-  function setSquareValue(index: number) {
+  function setSquaresValue(index: number) {
     const newData = squares.map((val, i) => {
       if (i === index) {
         return currentPlayer;
@@ -59,7 +59,7 @@ function Board() {
 
   return (
     <div>
-      {!winner && <p>Hey {currentPlayer}, its your turn</p>}
+      {!winner && <p>Hey {currentPlayer}, it is your turn</p>}
       {winner && winner !== "BOTH" && <p>Congratulations {winner}</p>}
       {winner && winner === "BOTH" && (
         <p>Congratulations you are both winners</p>
@@ -73,7 +73,7 @@ function Board() {
               <Square
                 winner={winner}
                 key={i}
-                onClick={() => setSquareValue(i)}
+                onClick={() => setSquaresquareValue(i)}
                 value={squares[i]}
               />
             );
