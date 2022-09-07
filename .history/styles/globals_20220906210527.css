@@ -2,7 +2,8 @@
   display: grid;
   place-content: center;
   grid-gap: 1px;
-  margin: 0;
+  height: 100vh;
+  max-width: 100%;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -12,6 +13,7 @@
   font-size: 5rem;
   color: #e8e5e5;
   border: solid 1px black;
+  margin: 0;
 }
 
 .square_o {
